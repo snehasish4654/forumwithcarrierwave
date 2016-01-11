@@ -1,0 +1,41 @@
+<% if model_signed_in? %>
+<%= link_to('Logout', destroy_model_session_path, :method => :delete) %>
+<h3><%= link_to ' new user database' , new_user_path %></h3><br />
+<% else %>
+<h3><%= link_to ' sign_up' ,new_model_registration_path  %> | <%= link_to ' sign_in' , new_model_session_path %></h3>
+<% end %>
+<% @users.each do |user| %>
+
+<%= link_to  user.name ,user_path(user) %><br />  
+<%= user.age %><br />  
+published at <%= time_ago_in_words(user.created_at)%><br />
+by <%= user.model.email %><br />
+
+<% if (current_model == user.model) %>
+<%= link_to 'Edit' , edit_user_path(user) %> |
+<%= link_to 'Delete', user , method: :delete , data: {confirm: "want to do ?"} %><br />
+<% end %> 
+
+
+
+<% if model_signed_in? %>
+    Comments :<%= user.comments.count %><br />
+    <% if user.comments.count != 0 %>
+         <%= render user.comments %><br />
+     <%end%>
+
+<% end %>
+
+
+<% end %>
+
+
+
+ 
+
+
+
+
+
+
+

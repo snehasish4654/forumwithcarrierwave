@@ -1,0 +1,15 @@
+<%= link_to 'go back',users_path %>
+<h5><%=image_tag @user.image_url(:thumb).to_s%></h5>
+<h5><%= @user.name %></h5>
+<h5><%= @user.age %></h5>
+comments : <%= @user.comments.count %><br />
+<%= render @user.comments %>
+<% if model_signed_in? %>
+<h5>Write comment<br /><%= render "comments/form" %></h5>
+<%end%>
+
+
+
+
+
+

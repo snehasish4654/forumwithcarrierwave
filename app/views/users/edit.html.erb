@@ -1,0 +1,10 @@
+<%= link_to 'go back',users_path %>
+<%= form_for @user , html: { multipart: true } do |f| %>
+<%= image_tag @user.image.url(:thumb) %><br />
+<%= f.file_field :image %> <br />
+<%= f.label :title%><br /> <%= f.text_field :name %> <br />
+<%= f.label :content %> <br /><%= f.text_field :age %><br />
+<%= f.submit 'save '%>
+
+
+<% end %>

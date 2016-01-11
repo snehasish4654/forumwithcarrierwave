@@ -1,0 +1,12 @@
+<% if model_signed_in? %>
+     
+    <% if current_model.id == comment.model_id %>
+        <%= comment.comment %> by <%= comment.model.email %>
+        <%= link_to "delete",[comment.user , comment] ,method: :delete , data:{confirm: "are you sure" }%> <br />
+     <% else %>
+     <%= comment.comment %> by <%= comment.model.email %><br />
+<% end %>
+
+<%end %>
+
+ 
