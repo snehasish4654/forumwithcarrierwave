@@ -1,22 +1,15 @@
 Rails.application.routes.draw do
 
-  devise_for :models
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   #resources :users 
-  resources :users do
-    resources :comments
-    collection do
-    get 'complete'
-    delete 'destroy_multiple'
-    
-
-  end
-end
+  
 root 'users#index'
+  devise_for :models
   
 
 

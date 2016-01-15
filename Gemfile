@@ -4,6 +4,7 @@ gem 'carrierwave'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 gem 'devise', '~> 3.5', '>= 3.5.3'
+
 # Use postgresql as the database for Active Record
 
 # Use SCSS for stylesheets
