@@ -76,6 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.action_mailer.default_url_options = { host: 'hidden-spire-1398.herokuapp.com' }
   
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
@@ -85,10 +86,10 @@ Rails.application.configure do
   :authentication => :plain ,
   :user_name    => ENV['findmyworld2k15@gmail.com'],
   :password     => ENV['mynameuskhan'],
-  :domain      => 'hidden-spire-1398.herokuapp.com',
+  :domain      => 'gmail.com',
   :enable_starttls_auto => true
 }
-config.action_mailer.default_url_options = { host: 'hidden-spire-1398.herokuapp.com' }
+
   
 
 end

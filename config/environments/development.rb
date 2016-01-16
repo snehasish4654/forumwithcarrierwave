@@ -50,7 +50,7 @@ Rails.application.configure do
   :authentication => :plain ,
   :user_name    => ENV['findmyworld2k15@gmail.com'],
   :password     => ENV['mynameuskhan'],
-  :domain      => 'railscasts.com',
+  :domain      => 'gmail.com',
   :enable_starttls_auto => true
 }
 
