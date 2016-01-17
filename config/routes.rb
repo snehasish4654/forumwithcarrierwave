@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   #resources :users 
   resources :users
-  root 'users#index'
+  root to:'users#index'
   devise_for :models
   
 
