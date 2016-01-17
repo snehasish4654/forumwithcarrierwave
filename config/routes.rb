@@ -10,8 +10,12 @@ Rails.application.routes.draw do
   
   
   devise_for :models
-  root to: "users#index"
-  resources :users
+  root "users#index"
+  resources :users do
+    resources :comments
+  end
+  
+  
   
 
 
