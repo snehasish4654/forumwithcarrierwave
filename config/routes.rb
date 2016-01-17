@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   #resources :users 
-  
-root 'users#index'
+  resources :users
+  root 'users#index'
   devise_for :models
   
 
